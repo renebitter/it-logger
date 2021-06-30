@@ -16,3 +16,7 @@ materialize-css;
 Material icons;
 moment;
 react-moment;
+redux;
+react-redux;
+redux-thunk;
+redux-devtools-extension;
