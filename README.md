@@ -10,9 +10,9 @@ In the project directory, you can run:
 
 ## Dependencies
 
-json-server
-concurrently
-materialize-css
-Material icons
-moment
-react-moment
+json-server;
+concurrently;
+materialize-css;
+Material icons;
+moment;
+react-moment;
