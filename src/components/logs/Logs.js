@@ -29,11 +29,15 @@ const Logs = ({ log: { logs, loading }, getLogs }) => {
   );
 };
 
-Logs.propTypes = { log: PropTypes.object.isRequired };
+Logs.propTypes = {
+  log: PropTypes.object.isRequired,
+  getLogs: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => ({
   log: state.log,
 });
 
 // The action "getLogs()" when passed here with connect() will be available as a prop
+// "mapStateToProps" === sate
 export default connect(mapStateToProps, { getLogs })(Logs);
