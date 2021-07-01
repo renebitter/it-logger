@@ -2,68 +2,36 @@
   "logs": [
     {
       "id": 1,
-      "message": "Changed network card in server 007",
+      "message": "There is a polar expedition going on",
       "attention": false,
-      "tech": "John Doe",
-      "date": "2021-07-01T20:16:36.119Z"
+      "tech": "Alfred Wagner",
+      "date": "2021-07-01T21:53:42.407Z"
     },
     {
       "id": 2,
-      "message": "Fixed hard drive on workstation 0021",
+      "message": "Zup y'all",
       "attention": false,
-      "tech": "Sara Wilson",
-      "date": "2021-07-01T20:16:44.697Z"
+      "tech": "John Cena",
+      "date": "2021-07-01T21:53:01.716Z"
     },
     {
       "id": 3,
-      "message": "1122 wireless down",
+      "message": "Hell no",
       "attention": true,
-      "tech": "Sam Smith",
-      "date": "2021-07-01T20:16:54.508Z"
-    },
-    {
-      "id": 4,
-      "message": "fdgd",
-      "attention": true,
-      "tech": "Do I get a toast?",
-      "date": "2021-07-01T21:11:53.905Z"
+      "tech": "Lorem Ipsum",
+      "date": "2021-07-01T21:52:01.402Z"
     }
   ],
   "techs": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe"
-    },
-    {
-      "id": 2,
-      "firstName": "Sam",
-      "lastName": "Smith"
-    },
-    {
-      "id": 3,
-      "firstName": "Sara",
-      "lastName": "Wilson"
-    },
-    {
-      "firstName": "Rene",
-      "lastName": "Doe",
+      "firstName": "Lorem",
+      "lastName": "Ipsum",
       "id": 4
     },
     {
-      "firstName": "John",
-      "lastName": "Cena",
-      "id": 6
-    },
-    {
-      "firstName": "What Id",
-      "lastName": "Do I have?",
-      "id": 7
-    },
-    {
-      "firstName": "Do I get",
-      "lastName": "a toast?",
-      "id": 8
+      "firstName": "Alfred",
+      "lastName": "Wagner",
+      "id": 5
     }
   ]
 }
