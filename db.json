@@ -1,11 +1,11 @@
 {
   "logs": [
     {
+      "id": 1,
       "message": "Changed network card in server 007",
       "attention": false,
       "tech": "Sam Smith",
-      "date": "2019-05-31T15:46:10.179Z",
-      "id": 1
+      "date": "2021-07-01T11:29:12.947Z"
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       "message": "1122 wireless down",
       "attention": true,
       "tech": "Sara Wilson",
-      "date": "2021-06-30T22:57:56.303Z"
+      "date": "2021-07-01T11:04:33.688Z"
     }
   ],
   "techs": [
