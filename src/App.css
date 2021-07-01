@@ -1,0 +1,11 @@
+.material-tooltip {
+  background-color: #1976d2;
+}
+
+.material-tooltip:nth-of-type(3) {
+  background-color: #4caf50;
+}
+
+.material-tooltip:nth-of-type(4) {
+  background-color: #f44336;
+}
