@@ -10,7 +10,6 @@ const TechSelectOptions = ({ getTechs, tech: { techs, loading } }) => {
   }, []);
 
   return (
-    // logs.map((log) => <LogItem log={log} key={log.id} />
     !loading &&
     techs !== null &&
     techs.map((tech) => (
