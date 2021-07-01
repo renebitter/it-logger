@@ -56,7 +56,6 @@ export const addTech = (tech) => async (dispatch) => {
 export const deleteTech = (id) => async (dispatch) => {
   try {
     setLoading();
-    // TODO: check if id is needed
     await fetch(`/techs/${id}`, {
       method: "DELETE",
     });
