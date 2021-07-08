@@ -14,10 +14,10 @@ export const getTechs = () => async (dispatch) => {
     const res = await fetch("/api/techs");
     const data = await res.json();
 
-    // dispatch({
-    //   type: GET_TECHS,
-    //   payload: data,
-    // });
+    dispatch({
+      type: GET_TECHS,
+      payload: data,
+    });
   } catch (err) {
     dispatch({
       type: TECHS_ERROR,
@@ -40,10 +40,10 @@ export const addTech = (tech) => async (dispatch) => {
     });
     const data = await res.json();
 
-    // dispatch({
-    //   type: ADD_TECH,
-    //   payload: data,
-    // });
+    dispatch({
+      type: ADD_TECH,
+      payload: data,
+    });
   } catch (err) {
     dispatch({
       type: TECHS_ERROR,

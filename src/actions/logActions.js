@@ -18,10 +18,10 @@ export const getLogs = () => async (dispatch) => {
     const res = await fetch("/api/logs");
     const data = await res.json();
 
-    // dispatch({
-    //   type: GET_LOGS,
-    //   payload: data,
-    // });
+    dispatch({
+      type: GET_LOGS,
+      payload: data,
+    });
   } catch (err) {
     dispatch({
       type: LOGS_ERROR,
@@ -65,10 +65,10 @@ export const deleteLog = (id) => async (dispatch) => {
       method: "DELETE",
     });
 
-    // dispatch({
-    //   type: DELETE_LOG,
-    //   payload: id,
-    // });
+    dispatch({
+      type: DELETE_LOG,
+      payload: id,
+    });
   } catch (err) {
     dispatch({
       type: LOGS_ERROR,
@@ -90,13 +90,14 @@ export const updateLog = (log) => async (dispatch) => {
       },
     });
 
-    // const data = await res.json();
-
-    // dispatch({
-    //   type: UPDATE_LOG,
-    //   payload: data,
-    // });
+    const data = await res.json();
+    console.log(data);
+    dispatch({
+      type: UPDATE_LOG,
+      payload: data,
+    });
   } catch (err) {
+    console.log(err);
     dispatch({
       type: LOGS_ERROR,
       payload: err.response.statusText,
@@ -112,10 +113,10 @@ export const searchLogs = (text) => async (dispatch) => {
     const res = await fetch(`/api/logs?q=${text}`);
     const data = await res.json();
 
-    // dispatch({
-    //   type: SEARCH_LOGS,
-    //   payload: data,
-    // });
+    dispatch({
+      type: SEARCH_LOGS,
+      payload: data,
+    });
   } catch (err) {
     dispatch({
       type: LOGS_ERROR,
