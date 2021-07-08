@@ -15,8 +15,8 @@ export const getLogs = () => async (dispatch) => {
   try {
     setLoading();
 
-    // const res = await fetch("/logs");
-    // const data = await res.json();
+    const res = await fetch("/api/logs");
+    const data = await res.json();
 
     // dispatch({
     //   type: GET_LOGS,
@@ -35,19 +35,19 @@ export const addLog = (log) => async (dispatch) => {
   try {
     setLoading();
 
-    // const res = await fetch("/logs", {
-    //   method: "POST",
-    //   body: JSON.stringify(log),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // });
-    // const data = await res.json();
+    const res = await fetch("/api/logs", {
+      method: "POST",
+      body: JSON.stringify(log),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
 
-    // dispatch({
-    //   type: ADD_LOG,
-    //   payload: data,
-    // });
+    dispatch({
+      type: ADD_LOG,
+      payload: data,
+    });
   } catch (err) {
     dispatch({
       type: LOGS_ERROR,
@@ -61,9 +61,9 @@ export const deleteLog = (id) => async (dispatch) => {
   try {
     setLoading();
 
-    // await fetch(`/logs/${id}`, {
-    //   method: "DELETE",
-    // });
+    await fetch(`/api/logs/${id}`, {
+      method: "DELETE",
+    });
 
     // dispatch({
     //   type: DELETE_LOG,
@@ -82,13 +82,13 @@ export const updateLog = (log) => async (dispatch) => {
   try {
     setLoading();
 
-    // const res = await fetch(`/logs/${log.id}`, {
-    //   method: "PUT",
-    //   body: JSON.stringify(log),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // });
+    const res = await fetch(`/api/logs/${log.id}`, {
+      method: "PUT",
+      body: JSON.stringify(log),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     // const data = await res.json();
 
@@ -109,8 +109,8 @@ export const searchLogs = (text) => async (dispatch) => {
   try {
     setLoading();
 
-    // const res = await fetch(`/logs?q=${text}`);
-    // const data = await res.json();
+    const res = await fetch(`/api/logs?q=${text}`);
+    const data = await res.json();
 
     // dispatch({
     //   type: SEARCH_LOGS,
