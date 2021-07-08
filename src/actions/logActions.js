@@ -25,7 +25,7 @@ export const getLogs = () => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: LOGS_ERROR,
-      payload: err.response.statusText,
+      payload: err,
     });
   }
 };
@@ -51,7 +51,7 @@ export const addLog = (log) => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: LOGS_ERROR,
-      payload: err.response.statusText,
+      payload: err,
     });
   }
 };
@@ -72,7 +72,7 @@ export const deleteLog = (id) => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: LOGS_ERROR,
-      payload: err.response.statusText,
+      payload: err,
     });
   }
 };
@@ -91,13 +91,11 @@ export const updateLog = (log) => async (dispatch) => {
     });
 
     const data = await res.json();
-    console.log(data);
     dispatch({
       type: UPDATE_LOG,
       payload: data,
     });
   } catch (err) {
-    console.log(err);
     dispatch({
       type: LOGS_ERROR,
       payload: err.response.statusText,
