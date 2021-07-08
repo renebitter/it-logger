@@ -11,7 +11,7 @@ export const getTechs = () => async (dispatch) => {
   try {
     setLoading();
 
-    const res = await fetch("/techs");
+    const res = await fetch("/api/techs");
     const data = await res.json();
 
     dispatch({
@@ -31,7 +31,7 @@ export const addTech = (tech) => async (dispatch) => {
   try {
     setLoading();
 
-    const res = await fetch("/techs", {
+    const res = await fetch("/api/techs", {
       method: "POST",
       body: JSON.stringify(tech),
       headers: {
@@ -56,7 +56,7 @@ export const addTech = (tech) => async (dispatch) => {
 export const deleteTech = (id) => async (dispatch) => {
   try {
     setLoading();
-    await fetch(`/techs/${id}`, {
+    await fetch(`/api/techs/${id}`, {
       method: "DELETE",
     });
 
